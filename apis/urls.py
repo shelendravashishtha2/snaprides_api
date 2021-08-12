@@ -6,6 +6,7 @@ from rest_framework.routers import DefaultRouter
 router = DefaultRouter()
 app_name = 'api'
 router.register('user', UserView, basename='UserAPI')
+router.register('bikes', BikesView, basename='UserAPI')
 
 urlpatterns = [
     path('user/', CustomAuthToken.as_view(), name="tokenView"),
